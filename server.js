@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cors()); // allows us to connect to the other localhost where fronted is being ran
 
 app.get("/", (req, res) => {
-  res.redirect("/signin");
+  res.send("hi");
 });
 
 app.get("/profile/:id", profile.handleProfileGet(db));
